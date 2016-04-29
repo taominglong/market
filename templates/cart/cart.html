@@ -1,0 +1,29 @@
+<ion-view title="购物车">
+  <ion-content class="has-header">
+  	<ion-list>
+      
+  	   <ion-item ng-model="filter.blue" ng-repeat="product in products" class="item-remove-animate item-thumbnail-left item-icon-right cart-list">
+		      <ion-checkbox ng-model="product.checked" ng-click="checkItem()"> 
+            <img ng-src="{{product.picture}}"/>
+              <h3>{{product.name}}</h3>
+              <p>{{product.quantity}} × {{product.price}}</p>
+          </ion-checkbox>
+              
+          <i class="icon ion-chevron-right icon-accessory" ng-click="showDetail({{product.id}})"></i>
+
+          <ion-option-button class="button-assertive" ng-click="remove(product)">删除</ion-option-button>
+
+  	   </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+  <!--合计-->
+    <div class="bar bar-subfooter bar-balanced">
+      <ion-checkbox ng-model="statistics.allChecked" ng-click="checkALl()">
+          <span>全选</span>
+          <span style="margin-left:20px;">总金额：<span style="color: red;">{{statistics.totalprice || 0 | currency:'￥'}}</span></span>
+      </ion-checkbox>
+      <button class="button pull-right button-calm button-small">去结算</button>
+    </div>
+</ion-view>

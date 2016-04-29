@@ -1,0 +1,139 @@
+/* Empty. Add your own CSS if you like */
+a{
+	text-decoration:none !important;
+}
+.bar-brand{
+	background: url(../img/ionic.png) !important;
+}
+.bar-brand .title{
+	color:red !important;
+	font-family : 微软雅黑,宋体 !important;
+}
+.carousel-inner .item{
+	width:100% !important;
+	height: 10% !important;
+}
+/**首页新闻标题透明度**/
+.carousel-caption {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #fff;
+  text-align: center;
+  filter:alpha(opacity=70); 
+  -moz-opacity:0.7; 
+  opacity:0.7;
+}
+.modal-open .modal{
+	overflow-y: hidden !important;
+}
+/**九宫格样式**/
+.list .square img{
+	margin:0.3%;
+	max-width:32.5%;
+	height:100px;
+	display:block;
+	float: left !important;
+}
+.list .square .carousel-caption{
+	display: none;
+}
+.list .square + a{
+	display: none;
+}
+
+.assertive{
+	font-size: 28px;
+}
+.assertive .span{
+	font-size: 20px !important;
+}
+
+/** 价格颜色**/
+.market h3{
+	white-space:normal !important;
+}
+.market input{
+	border: 1px solid #DDDDDD !important;
+}
+.bar-subfooter button{
+	margin-top: -5px;
+	right:0px !important;
+}
+/**我的信息**/
+.my-bar{
+	height:100px !important;
+	background: url(../img/sky.jpg);
+	border: 0;
+}
+.my-bar img{
+	height:80%;line-height:100%;text-align:center; vertical-align:middle;margin:10px auto; 
+}
+.my-content{
+	margin-top: 55px;
+	background: url(../img/sky.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.my-content .sub .t{
+	float: left;
+}
+.my-content .sub .a{
+	float: right;
+}
+.my-content .row a{
+	margin:auto;
+}
+.service .col{
+	text-align:center;
+	margin-left:8%;
+	height:70px;	
+}
+.service .tab-item i{
+	font-size: 64px;
+	line-height: 64px;
+} 
+
+/**购物车**/
+.cart-list .item-content{
+	padding-left: 0px;
+	padding: 0px;
+}
+.item-checkbox{
+	border-style:none;
+	overflow: visible !important;
+	margin-left:-10px;
+}
+.item-checkbox .item-content{
+	overflow:visible !important;
+}
+.activated{
+	background-color:transparent !important; 
+}
+.item-checkbox .item-content h3{
+	white-space:normal;
+	margin-left:80px;
+	font-weight: 800;
+	width: 100% !important;
+}
+.item-checkbox .item-content p,h3{
+	overflow:visible !important;
+	margin-left:80px;
+}
+.item-checkbox .item-content p{
+	font-size: 16px;
+	font-weight: 800;
+	color: red;
+}
+.item-checkbox .item-content img{
+	margin-left:-20px;
+}
+.bar-subfooter label {
+	padding:5px 0px 0px 50px;
+	background-color: #33cd5f; 
+	width:80px;
+}

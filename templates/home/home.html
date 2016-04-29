@@ -1,0 +1,30 @@
+      <ion-view title="今日推荐">
+        <!--查询按钮-->
+        <ion-nav-buttons side="right">
+          <button class="button button-icon icon {{css.icon}}" ng-click="changeCss()"></button>
+        </ion-nav-buttons>
+        <ion-content>
+         <ul class="list">
+          <li ng-repeat="topic in topics">            
+            <div class="{{css.listType}}">
+              <img ng-src="{{topic.img}}" />
+              <div class="carousel-caption">
+                <h4>{{topic.name}}</h4>
+                <p>{{topic.position}}</p>
+              </div>
+            </div>
+            
+            <a class="item  assertive" href="#">
+
+              <i ng-if="topic.ispraise" class="icon ion-ios-heart" ng-click="praise(topic.id)"><span style="font-size:16px;">{{topic.praise | number}}</span></i>
+              <i ng-if="!topic.ispraise" class="icon ion-ios-heart-outline"  ng-click="praise(topic.id)"><span style="font-size:16px;">{{topic.praise | number}}</span></i> 
+              
+              &nbsp;
+
+              <i ng-if="topic.store" class="icon ion-ios-bookmarks-outline" ng-click="strore(topic.id)"></i>
+              <i ng-if="!topic.store" class="icon ion-ios-bookmarks" ng-click="strore(topic.id)"></i>
+            </a>
+          </li>
+         </ul>
+        </ion-content>
+      </ion-view>

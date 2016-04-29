@@ -1,0 +1,30 @@
+     <ion-view title="商城">
+        <!--查询按钮-->
+        <ion-nav-buttons side="right">
+          <button class="button button-icon icon ion-android-search" ng-click="openModal()"></button>
+        </ion-nav-buttons>
+
+        <ion-content>
+          <div class="list" ng-repeat="good in goods">
+            <div class="item item-input-inset">
+              <a class="item-thumbnail-left market" href="#">
+                  <img src="{{good.img}}" class="img-thumbnail"/>
+                  <h3>{{good.model}}</h3>
+                  <p>{{good.price | currency:'￥'}}</p>
+
+                  <!-- 自定义指令:价格-->
+                  <div price good-id="{{good.id}}"></div> 
+
+              </a>
+            </div>
+          </div>
+          <div style="height:20px;"></div>
+        </ion-content>
+        
+        <!--合计-->
+        <div class="bar bar-subfooter bar-balanced">
+          共 <span style="color: red;">{{summary.quantity || 0}}</span> 件，金额 <span style="color: red;">{{summary.totalprice || 0 | currency:'￥'}}</span>
+          <button class="button pull-right button-calm button-small">加入购物车</button>
+        </div>
+
+      </ion-view>
